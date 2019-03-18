@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <p:growl id="msg" sticky="true" showDetail="true"/>
+        <h:form>
+            <p:panelGrid columns="2" style="position: absolute; top: 250px; left: 500px">
+                <f:facet name="header">Login panel</f:facet>
+                <h:outputText value=""/>
+                <h:inputText value="#{login.username}"/>
+                <h:outputText value=""/>
+                <h:inputText value="#{login.password}"/>
+                <f:facet name="footer">
+                    <p:commandButton value="Login" action="#{login.login()}"/>
+                </f:facet>
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
